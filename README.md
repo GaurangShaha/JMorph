@@ -120,7 +120,7 @@ Annotate source class and rebuild the project. JMorph library will generate a mo
 
 In this you will find two methods named as morph and reverseMorph. These can be used to copy attributes of object. 
 
-#### @MorphTo(TargetClass.class) (#MorphTo)
+#### @MorphTo(TargetClass.class)
 
 This annotation is used on class which needs be morphed. It expects class of target in which it should be morphed.
 
@@ -132,23 +132,23 @@ In order to generate the morpher, source and target class JMorph library need fo
 
 JMorph library will auto compare the attributes from both the classes and creates the morpher for you. Morpher will include the attributes which has same name and compatible data types.
 
-If attribute has different names, you can instruct JMorph library to generate mapping using [@MorphToField](#MorphToField) annotation. 
+If attribute has different names, you can instruct JMorph library to generate mapping using [@MorphToField](#morphtofieldfieldname) annotation. 
 
-If attribute has different data types, you can instruct JMorph library to generate mapping using [@FieldTransformer](#FieldTransformer) annotation.
+If attribute has different data types, you can instruct JMorph library to generate mapping using [@FieldTransformer](#fieldtransformerfieldtransformer) annotation.
 
 Note : No annotation will be needed on target class.
 
-#### @MorphToField("fieldName") (#MorphToField)
+#### @MorphToField("fieldName")
 
 This annotation is used on attribute which has different name in both class. It expects attribute name from target class with whom it need be morphed.
 
-It can be used with conjunction with [@FieldTransformer](#FieldTransformer) annotation.
+It can be used with conjunction with [@FieldTransformer](#fieldtransformerfieldtransformer) annotation.
 
-Note : This annotation should be used within class which is annotated with [@MorphTo](#MorphTo). JMorph library will ignore this annotation if used outside of class annotated by [@MorphTo](#MorphTo).
+Note : This annotation should be used within class which is annotated with [@MorphTo](#morphtotargetclass). JMorph library will ignore this annotation if used outside of class annotated by [@MorphTo](#morphtotargetclass).
 
 If attributes annotated with this has incompatible data type, JMorph library will ignore it.
 
-#### @FieldTransformer(FieldTransformer.class) (#FieldTransformer)
+#### @FieldTransformer(FieldTransformer.class)
 
 This annotation is used on attribute which has different data type in both class. It expects a class which helps library to transform the fields.
 
@@ -175,7 +175,7 @@ public class MillisToDateStringTransformer implements FieldTransformerContract<L
 }
 ```
 
-It can be used with conjunction with [@MorphToField](#MorphToField) annotation.
+It can be used with conjunction with [@MorphToField](#morphtofieldfieldname) annotation.
 
 Note : Either default or public no-arg constructor should be present in transformer class.
 
