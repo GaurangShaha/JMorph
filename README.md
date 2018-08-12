@@ -134,7 +134,7 @@ JMorph library will auto compare the attributes from both the classes and create
 
 If attribute has different names, you can instruct JMorph library to generate mapping using [@MorphToField](#morphtofieldfieldname) annotation. 
 
-If attribute has different data types, you can instruct JMorph library to generate mapping using [@FieldTransformer](#fieldtransformerfieldtransformer) annotation.
+If attribute has different data types, you can instruct JMorph library to generate mapping using [@FieldTransformer](#fieldtransformerfieldtransformerclass) annotation.
 
 Note : No annotation will be needed on target class.
 
@@ -142,9 +142,9 @@ Note : No annotation will be needed on target class.
 
 This annotation is used on attribute which has different name in both class. It expects attribute name from target class with whom it need be morphed.
 
-It can be used with conjunction with [@FieldTransformer](#fieldtransformerfieldtransformer) annotation.
+It can be used with conjunction with [@FieldTransformer](#fieldtransformerfieldtransformerclass) annotation.
 
-Note : This annotation should be used within class which is annotated with [@MorphTo](#morphtotargetclass). JMorph library will ignore this annotation if used outside of class annotated by [@MorphTo](#morphtotargetclass).
+Note : This annotation should be used within class which is annotated with [@MorphTo](#morphtotargetclassclass). JMorph library will ignore this annotation if used outside of class annotated by [@MorphTo](#morphtotargetclassclass).
 
 If attributes annotated with this has incompatible data type, JMorph library will ignore it.
 
