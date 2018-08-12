@@ -1,0 +1,47 @@
+package com.jmorph.processor.constant;
+
+public class Constant {
+    public static final String ERROR_INTERFACE_FOUND = "%s is an interface, only public class can be used with @MorphTo";
+    public static final String ERROR_PRIVATE_CLASS_FOUND = "%s is private class, only public class can be used with @MorphTo";
+    public static final String ERROR_ABSTRACT_CLASS_FOUND = "%s is an abstract class, only non abstract public class can be used with @MorphTo";
+    public static final String ERROR_ENUM_FOUND = "%s is an enum, only public class can be used with @MorphTo";
+    public static final String ERROR_ANNOTATION_TYPE_FOUND = "%s is an annotation, only public class can be used with @MorphTo";
+    public static final String ERROR_PROTECTED_CLASS_FOUND = "%s is protected class, only public class can be used with @MorphTo";
+    public static final String MORPH = "morph";
+    public static final String SOURCE = "source";
+    public static final String NEW_TARGET_OBJECT_PATTERN = "$1T target = new $1T()";
+    public static final String RETURN_TARGET = "return target";
+    public static final String REVERSE_MORPH = "reverseMorph";
+    public static final String TARGET = "target";
+    public static final String NEW_SOURCE_OBJECT_PATTERN = "$1T source = new $1T()";
+    public static final String RETURN_SOURCE = "return source";
+    public static final String GET = "get";
+    public static final String IS = "is";
+    public static final String PUBLIC = "public";
+    public static final String I = "i";
+    public static final String SET = "set";
+    public static final String STATEMENT_FOR_MORPH_METHOD = "target.%s(source.%s())";
+    public static final String STATEMENT_FOR_MORPH_METHOD_WITH_DOWNCAST = "target.%s((%s)source.%s())";
+    public static final String STATEMENT_FOR_REVERSE_MORPH_METHOD = "source.%s(target.%s())";
+    public static final String STATEMENT_FOR_REVERSE_MORPH_METHOD_WITH_DOWNCAST = "source.%s((%s)target.%s())";
+    public static final String MORPHER_CLASS_NAME_PATTERN = "%sMorpher";
+    public static final String AUTO_GENERATE_CLASS_FROM_JMORPH_LIBRARY = "Auto Generate class from JMorph library. Changes made to this class will get overwritten during compiling.\n";
+    public static final String MORPHER_PACKAGE_PATTERN = "com.jmorph.morpher";
+    public static final String ERROR_TRANSFORMER_CLASS_NOT_IMPLEMENTED_FIELD_TRANSFORMER_CONTRACT = "%s class should implement interface FieldTransformerContract";
+    public static final String ERROR_INTERFACE_USED_AS_FIELD_TRANSFORMER = "%s in an interface, only public class can be used with @FieldTransformer";
+    public static final String ERROR_ENUM_USED_AS_FIELD_TRANSFORMER = "%s in an enum, only public class can be used with @FieldTransformer";
+    public static final String ERROR_ANNOTATION_TYPE_AS_FIELD_TRANSFORMER = "%s in an annotation, only public class can be used with @FieldTransformer";
+    public static final String ERROR_PRIVATE_CLASS_AS_FIELD_TRANSFORMER = "%s in a private class, only public class can be used with @FieldTransformer";
+    public static final String ERROR_PROTECTED_CLASS_AS_FIELD_TRANSFORMER = "%s in a protected class, only public class can be used with @FieldTransformer";
+    public static final String ERROR_ABSTRACT_CLASS_AS_FIELD_TRANSFORMER = "%s in an abstract class, only public class can be used with @FieldTransformer";
+    public static final String TRANSFORM = "transform";
+    public static final String FIELD_TRANSFORMER_PATTER_FOR_MORPH = "target.%s(new %s().%s(source.%s()))";
+    public static final String FIELD_TRANSFORMER_PATTER_FOR_MORPH_FOR_DOWNCAST = "target.%s((%s)new %s().%s(source.%s()))";
+    public static final String REVERSE_TRANSFORM = "reverseTransform";
+    public static final String FIELD_TRANSFORMER_PATTER_FOR_REVERSE_MORPH = "source.%s(new %s().%s(target.%s()))";
+    public static final String FIELD_TRANSFORMER_PATTER_FOR_REVERSE_MORPH_FOR_DOWNCAST = "source.%s((%s)new %s().%s(target.%s()))";
+    public static final String INCOMPATIBLE_TRANSFORM_METHOD = "Return type of 'transform' method of class '%s' should be %s. Switch the generics position provided with FieldTransformerContract";
+    public static final String INCOMPATIBLE_REVERSE_TRANSFORM_METHOD = "Return type of 'reverseTransform' method of class '%s' should be %s. Switch the generics position provided with FieldTransformerContract";
+    public static final String TRANSFORMER_CONTRACT_QUALIFIED_NAME = "com.jmorph.transformer.FieldTransformerContract";
+    public static final String ERROR_NO_ARG_CONSTRUCTOR_IS_MISSING = "No-arg constructor is missing in class %s";
+}
