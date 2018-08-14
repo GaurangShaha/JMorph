@@ -1,4 +1,31 @@
 apply plugin: 'java-library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+ext {
+
+    bintrayRepo = "JMorph"
+    bintrayName = "com.jmorph.processor"
+    libraryName = 'jmorph-processor'
+
+    publishedGroupId = 'com.jmorph'
+    artifact = 'jmorph-processor'
+
+    libraryDescription = 'A library which auto-generate code to copy your data between POJO classes.'
+
+    siteUrl = 'https://github.com/GaurangShaha/JMorph'
+    gitUrl = 'https://github.com/GaurangShaha/JMorph.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'gaurangshaha'
+    developerName = 'Gaurang Shaha'
+    developerEmail = 'gaurang.shaha@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -8,3 +35,8 @@ dependencies {
 
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
+
+if (project.rootProject.file('local.properties').exists()) {
+    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+}

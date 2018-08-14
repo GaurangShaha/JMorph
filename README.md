@@ -103,8 +103,8 @@ Add the library dependency to your build.gradle file.
 
 ```groovy
 dependencies {
-	implementation project(path: ':jmorph-annotation')
-	annotationProcessor project(':jmorph-processor')
+	implementation 'com.jmorph:jmorph-annotation:1.0.0'
+	annotationProcessor 'com.jmorph:jmorph-processor:1.0.0'
 }
 ```
 
