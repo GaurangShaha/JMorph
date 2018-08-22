@@ -1,6 +1,10 @@
 # JMorph
+A library which auto-generate code to copy your data between POJO classes.
 
 ## Version
+Annotations  [![Download](https://api.bintray.com/packages/gaurangshaha/JMorph/com.jmorph.annotation/images/download.svg) ](https://bintray.com/gaurangshaha/JMorph/com.jmorph.annotation/_latestVersion) 
+
+Compiler  [![Download](https://api.bintray.com/packages/gaurangshaha/JMorph-Processor/jmorph-compiler/images/download.svg) ](https://bintray.com/gaurangshaha/JMorph-Processor/jmorph-compiler/_latestVersion)
 
 ## Use case
 While implementing [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html), we ended up creating different POJO classes for each layers.
